@@ -1,0 +1,116 @@
+User 表
+	user_Id用户编号
+	user_Username
+	user_Password
+
+
+
+
+OutputData
+
+output_Id序号
+output_CustomerName客户名称
+output_CustomerArea地区
+output_InvoiceNum发票号
+output_InvoiceDate开/收票日期
+output_Money销项金额
+output_Tax销项税金
+output_MoneySum销项价税合计金额
+output_Remark备注
+
+
+
+
+InputData
+
+input_Id序号
+input_SupplierName供应商名称
+input_InvoiceNum发票号
+input_InvoiceDate开/收票日期
+input_Money;进项金额
+input_Tax;进项税金 
+input_MoneySum;进项价税合计金额
+input_Remark;备注
+
+
+create table Manage
+(
+	manage_Id nvarchar(50) primary key,
+	manage_Username nvarchar(50) not null,
+	manage_Password nvarchar(50) not null,
+	
+)
+
+create table OutputData
+(
+	output_Id nvarchar(50) primary key,
+	output_CustomerName nvarchar(50) not null,
+	output_CustomerArea nvarchar(50) not null,
+	output_InvoiceNum nvarchar(50) not null,
+	output_InvoiceDate date not null,
+	output_Money float not null,
+	output_Tax float not null,
+	output_MoneySum float not null,
+	output_Remark nvarchar(200)	
+)
+
+create table InputData
+(
+	input_Id nvarchar(50) primary key,
+	input_SupplierName nvarchar(50) not null,
+	input_InvoiceNum nvarchar(50) not null,
+	input_InvoiceDate nvarchar(50) not null,
+	input_Money float not null,
+	input_Tax float not null,
+	input_MoneySum float not null,
+	input_Remark nvarchar(200)
+)
+
+
+
+
+
+
+
+
+****************
+
+
+
+
+
+
+create table Manage
+(
+	manage_Id int IDENTITY(1,1) primary key,
+	manage_Username nvarchar(50) not null,
+	manage_Password nvarchar(50) not null,
+	
+)
+
+create table DataOutput
+(
+	output_Id nvarchar(50) primary key,
+	output_CustomerName nvarchar(50) not null,
+	output_CustomerArea nvarchar(50) not null,
+	output_InvoiceNum nvarchar(50) not null,
+	output_InvoiceDate nvarchar(50) not null,
+	output_Money nvarchar(50) not null,
+	output_Tax nvarchar(50) not null,
+	output_MoneySum nvarchar(50) not null,
+	output_Remark nvarchar(200)	
+)
+
+create table DataInput
+(
+	input_Id nvarchar(50) primary key,
+	input_SupplierName nvarchar(50) not null,
+	input_InvoiceNum nvarchar(50) not null,
+	input_InvoiceDate nvarchar(50) not null,
+	input_Money nvarchar(50) not null,
+	input_Tax nvarchar(50) not null,
+	input_MoneySum nvarchar(50) not null,
+	input_Remark nvarchar(200)
+)
+
+
